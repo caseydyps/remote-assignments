@@ -66,6 +66,47 @@ li {
 	padding: 10px 15px;
 }
 
+.mobile_nav{
+  display:none;
+  position:fixed;
+  top: 0;
+  right:0;
+  width:30%;
+  min-height: 100vh;
+  
+  z-index:98;
+  background-color:white;
+  padding-top:0px;
+}
+
+.mobile_nav a{
+  
+  
+  
+  width:20%;
+  display:block;
+  max-width: 200px;
+  text-align: left;
+  right:0;
+  padding:12px 16px;
+  background-color:white;
+  
+}
+.mobile_nav button{
+  float:right;
+  position:relative;
+  display:block;
+  text-align: right;
+  left:0;
+  background-color:white;
+  border-color: white;
+  
+}
+
+
+
+
+
 /* ---- Welcome message ---- */
 
 
