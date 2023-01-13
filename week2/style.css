@@ -92,7 +92,7 @@ li {
   background-color:white;
   
 }
-.mobile_nav button{
+.mobile_nav button{ 
   float:right;
   position:relative;
   display:block;
@@ -193,7 +193,10 @@ section{
   margin: 15px 15px;
   background-color:#8a98a8;
 }
-
+/* hidden boxs */
+#hiddenbox{
+  display:none;
+}
 
 /* footer */
 footer{
