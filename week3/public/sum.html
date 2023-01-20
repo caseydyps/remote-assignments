@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <body>
+    <div id="demo">
+      <h1>Please enter your number.</h1>
+      <form action="/" method="post"></form>
+      <input type="text" name="input_number" id="domTextElement" />
+      <button type="submit" onclick="loadDoc()">get your result</button>
+    </div>
 
-<div id="demo">
-<h1>Please enter your number.</h1>
-<form action="/" method="post"></form>
-<input type="text" name='input_number' id="domTextElement">
-<button type="submit" onclick="loadDoc()">get your result</button>
+    <script>
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML = this.responseText;
+          }
+        };
 
-</div>
-
-<script>
-    function loadDoc() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("demo").innerHTML =
-          this.responseText;
-        }
-      };
-        
-      let inputValue = document.getElementById("domTextElement").value;  //read inputValue
-      console.log("test"+inputValue); 
-      xhttp.open("GET", 'http://localhost:3000/getData?number='+inputValue, true);
-      xhttp.send();
-    }
+        let inputValue = document.getElementById("domTextElement").value; //read inputValue
+        console.log("test" + inputValue);
+        xhttp.open(
+          "GET",
+          "http://localhost:3000/getData?number=" + inputValue,
+          true
+        );
+        xhttp.send();
+      }
     </script>
-    
-
-
-
-</body>
+  </body>
 </html>
