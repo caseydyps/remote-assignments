@@ -10,12 +10,13 @@ app.get("/", (req, res) => {
 app.get("/getData", (req, res) => {
   var userId = req.query.number;
   //res.send('Lack of Parameter')
-
-  if (userId == "xyz") {
-    res.send("Wrong Parameter");
-  } else if (userId > 0) {
+  var check = typeof userId;
+  console.log(check);
+  if (userId > 0) {
     var real_number = 0.5 * parseInt(userId, 10) * (1 + parseInt(userId, 10));
     res.send(`${real_number}`);
+  } else if (check == "string") {
+    res.send("Wrong Parameter");
   } else {
     res.send("Lack of Parameter");
   }
