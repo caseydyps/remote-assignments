@@ -1,0 +1,22 @@
+{
+  "name": "remote-assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseydyps/remote-assignments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caseydyps/remote-assignments/issues"
+  },
+  "homepage": "https://github.com/caseydyps/remote-assignments#readme",
+  "devDependencies": {
+    "express": "^4.18.2"
+  }
+}

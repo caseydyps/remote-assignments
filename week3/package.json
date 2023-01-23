@@ -8,7 +8,8 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "express": "^4.18.2"
   }
 }
