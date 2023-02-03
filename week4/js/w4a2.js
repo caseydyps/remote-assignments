@@ -7,11 +7,12 @@ function ajax(url) {
 }
 
 function render(data) {
-  // your code here
+  // fetch result
   let html = document.getElementById("info-text");
   data.map((info) => {
     const p = document.createElement("p");
     p.setAttribute("id", "fetchresult");
+    //render result
     p.innerHTML =
       info.name + " price:" + info.price + " description:" + info.description;
     html.appendChild(p);
