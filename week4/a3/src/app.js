@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
+//Banner
 export const Banner = () => {
   const [message, setMessage] = useState("Welcome message");
 
@@ -12,11 +12,12 @@ export const Banner = () => {
     </div>
   );
 };
-
+//Footer(call to action button and hidden boxes)
 export const Footer = () => {
   const [show, setShow] = useState(false);
 
   return (
+    //outer & inner div for centering
     <div className="outer">
       <div className="inner" onClick={() => setShow(!show)}>
         {"Call to Action"}
@@ -28,6 +29,7 @@ export const Footer = () => {
 
 const Title = "website Title/logo";
 const myTitleID = "logo";
+//title and Navbar
 function Header() {
   return (
     <header className="main-header">
@@ -52,7 +54,7 @@ function Header() {
     </header>
   );
 }
-
+//mobile navbar
 function MobileNav() {
   return (
     <nav className="mobile_nav">
@@ -64,14 +66,6 @@ function MobileNav() {
     </nav>
   );
 }
-
-/*function Banner() {
-  return (
-    <div className="banner">
-      <h2 id="headline">Welcome message</h2>
-    </div>
-  );
-}*/
 
 function Section() {
   return (
@@ -92,14 +86,7 @@ function Box() {
   );
 }
 
-/*function Footer() {
-  return (
-    <footer className="main-footer">
-      <div className="footer-inner">Call to action</div>
-    </footer>
-  );
-}*/
-
+//1 div with 6 components
 const Myapp = () => {
   return (
     <div>
@@ -112,7 +99,7 @@ const Myapp = () => {
     </div>
   );
 };
-
+//createRoot due to react v18
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(<Myapp />);
