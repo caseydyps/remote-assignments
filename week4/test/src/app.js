@@ -30,7 +30,9 @@ export const Footer = () => {
 const Title = "website Title/logo";
 const myTitleID = "logo";
 //title and Navbar
-function Header() {
+export const Header = () => {
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <header className="main-header">
       <nav>
@@ -44,28 +46,27 @@ function Header() {
             <a>item3</a>
             <a>item4</a>
           </ul>
-          <div className="menubar">
+          <div className="menubar" onClick={() => setShowNav(!showNav)}>
             <div className="menu"></div>
             <div className="menu"></div>
             <div className="menu"></div>
           </div>
+          <nav
+            className="mobile_nav"
+            onClick={() => setShowNav(!showNav)}
+            style={{ display: showNav ? "block" : "none" }}
+          >
+            <button>X</button>
+            <a>item1</a>
+            <a>item2</a>
+            <a>item3</a>
+            <a>item4</a>
+          </nav>
         </div>
       </nav>
     </header>
   );
-}
-//mobile navbar
-function MobileNav() {
-  return (
-    <nav className="mobile_nav">
-      <button>X</button>
-      <a>item1</a>
-      <a>item2</a>
-      <a>item3</a>
-      <a>item4</a>
-    </nav>
-  );
-}
+};
 
 function Section() {
   return (
@@ -91,7 +92,6 @@ const Myapp = () => {
   return (
     <div>
       <Header />
-      <MobileNav />
       <Banner />
       <Section />
       <Box />
